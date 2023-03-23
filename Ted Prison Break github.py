@@ -4,7 +4,7 @@ import random
 ##100 lock positions and 1 of them is randomly the right one for each lock. 
 lock_positions= [*range(0, 101)]
 
-unlock=random.randint(0,101)
+unlock=random.randint(0,10)
 
 ##hedge gets more discouraged the longer it goes without finding the right one.
 hedge_red_low= ["GREEN oh wait...no still RED","nooo", "why do there have to be so many positions??","ugh","Drat, That's not it", "Not it.", "Nope", "That's wrong", "It's red", "Maybe the next one will be green", "we'll get there eventually", "we'll get out of here soon", "Don't you worry, I've got this!", "I'm getting dizzy"]
@@ -49,8 +49,8 @@ for i in lock_positions:
             
     
     elif i == unlock:
-        print(i, "GREEN")
+        print(f"DOOR NUMBER {i} IS CORRECT YOU MAY PASS")
         sleep(0.6)
-        print("hedge:",random.choice(green))
-        print("you:",random.choice(green))
+        print("hedge:Finally I got the door!")
+        print("you:Yeah we did it! Let's get out of here!")
         break
